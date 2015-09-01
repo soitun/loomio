@@ -6,3 +6,4 @@ angular.module('loomioApp').factory 'ModalService', ($modal, $rootScope) ->
         templateUrl: modal.templateUrl
         controller:  modal.controller
         resolve:     resolve
+        size:        (modal.size || '')

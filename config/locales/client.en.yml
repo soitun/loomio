@@ -379,6 +379,38 @@ en:
       parent_members: 'Privacy: This group is visible to members of {{parentGroupName}} and members of {{groupName}}'
       public: 'Privacy: This group is visible on the web'
 
+  trial_card:
+    title: '30-day trial'
+    choose_plan: 'Choose your pricing plan'
+    in_progress_body: 'Thanks for trying out Loomio with <strong>{{name}}</strong>. You can pick a pricing plan that works for you at any time.'
+    expired_body_html: "<strong>{{name}}</strong> has now reached the end of it's Loomio trial. If you'd like to keep using it, you'll need to pick a pricing plan that suits. If you'd like to talk to someone about this, just <a href=''>get in touch</a>."
+
+  choose_plan_modal:
+    heading: 'Choose your pricing plan'
+    gift: Gift
+    standard: Standard
+    plus: Plus
+    free_trial_html: "We'll ask you to choose your pricing plan after a <span>30-day free trial</span>. No credit card required."
+    get_started_for_free: "Get started for free"
+    gift_body_html: |
+      <p>For groups that don't have the budget to pay a subscription.</p>
+      <p>Donation supported, with no requirement to pay.</p>
+
+    gift_donation_ask: We'll ask your group members for a donation.
+    unlimited_members: unlimited members
+    unlimited_decisions: unlimited decisions
+    email_support: email support
+    standard_price_html: |
+      <strong>$19</strong>/month<br><span>or</span> $190/year
+    plus_body: 'Everything in Standard, plus:'
+    premium_support: premium support
+    custom_url: custom URL
+    usage_statistics: usage statistics
+    plus_price_html: |
+      <strong>$179</strong>/month<br><span>or</span> $1790/year
+    select: Select
+
+
   edit_group_form:
     title: 'Edit Group Settings'
     profile:

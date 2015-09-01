@@ -1,0 +1,49 @@
+.choose-plan-modal
+  .modal-header
+    %button{type: 'button', class: 'close', ng-click: '$close()'}
+      %span{aria-hidden: 'true'} &times;
+      %span.sr-only{translate: 'common.action.cancel'}
+    %h1.lmo-h1.modal-title{translate: 'choose_plan_modal.heading'}
+
+  .modal-body
+    .choose-plan-modal__pricing-table
+      .choose-plan-modal__col
+        .choose-plan-modal__option.choose-plan-modal__option--gift
+          %h2.lmo-h2{translate: "choose_plan_modal.gift"}
+          .blank{translate: "choose_plan_modal.gift_body_html"}
+          %p.choose-plan-modal__gift-price{translate: "choose_plan_modal.gift_donation_ask"}
+          %button.choose-plan-modal__select-button.btn{translate: "choose_plan_modal.select"}
+      .choose-plan-modal__col
+        .choose-plan-modal__option.choose-plan-modal__option--standard
+          %h2.lmo-h2{translate: "choose_plan_modal.standard"}
+          %ul
+            %li
+              %i.fa.fa-check
+              {{"choose_plan_modal.unlimited_members" | translate}}
+            %li
+              %i.fa.fa-check
+              {{"choose_plan_modal.unlimited_decisions" | translate}}
+            %li
+              %i.fa.fa-check
+              {{"choose_plan_modal.email_support" | translate}}
+          %p.choose-plan-modal__price{translate: "choose_plan_modal.standard_price_html"}
+          %button.choose-plan-modal__select-button.btn{translate: "choose_plan_modal.select"}
+      .choose-plan-modal__col
+        .choose-plan-modal__option
+          %h2.lmo-h2{translate: "choose_plan_modal.plus"}
+          %p{translate: "choose_plan_modal.plus_body"}
+          %ul
+            %li
+              %i.fa.fa-check
+              {{"choose_plan_modal.premium_support" | translate}}
+            %li
+              %i.fa.fa-check
+              {{"choose_plan_modal.custom_url" | translate}}
+            %li
+              %i.fa.fa-check
+              {{"choose_plan_modal.usage_statistics" | translate}}
+          %p.choose-plan-modal__price{translate: "choose_plan_modal.plus_price_html"}
+          %button.choose-plan-modal__select-button.btn{translate: "choose_plan_modal.select"}
+
+  .modal-footer.lmo-clearfix
+    %button.btn.btn-warning{type: 'button', ng-click: '$close()', translate: 'common.action.cancel'}
