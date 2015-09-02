@@ -200,6 +200,11 @@ Loomio::Application.routes.draw do
     match 'unfollow', via: [:get, :post]
   end
 
+  namespace :subscriptions do
+    get 'signup_success'
+    get 'webhook'
+  end
+
   resources :invitations, only: [:show, :create, :destroy]
 
   get "/theme_assets/:id", to: 'theme_assets#show', as: 'theme_assets'
