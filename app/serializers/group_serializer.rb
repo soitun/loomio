@@ -24,9 +24,14 @@ class GroupSerializer < ActiveModel::Serializer
              :cover_url_desktop,
              :has_discussions,
              :has_multiple_admins,
-             :archived_at
+             :archived_at,
+             :subscription_kind
 
   has_one :parent, serializer: GroupSerializer, root: 'groups'
+
+  def subscription_kind
+    object.subscription.kind
+  end
 
   def logo_url_medium
     object.logo.url(:medium)

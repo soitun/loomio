@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150902032116) do
+ActiveRecord::Schema.define(version: 20150902075758) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -140,6 +140,7 @@ ActiveRecord::Schema.define(version: 20150902032116) do
   end
 
   add_index "comments", ["created_at"], name: "index_comments_on_created_at", using: :btree
+  add_index "comments", ["discussion_id"], name: "index_comments_on_commentable_id", using: :btree
   add_index "comments", ["discussion_id"], name: "index_comments_on_discussion_id", using: :btree
   add_index "comments", ["parent_id"], name: "index_comments_on_parent_id", using: :btree
   add_index "comments", ["user_id"], name: "index_comments_on_user_id", using: :btree
@@ -620,14 +621,14 @@ ActiveRecord::Schema.define(version: 20150902032116) do
   add_index "organisation_visits", ["visit_id", "organisation_id"], name: "index_organisation_visits_on_visit_id_and_organisation_id", unique: true, using: :btree
 
   create_table "subscriptions", force: :cascade do |t|
-    t.integer  "group_id"
-    t.decimal  "amount",                 precision: 8, scale: 2
-    t.datetime "created_at",                                     null: false
-    t.datetime "updated_at",                                     null: false
-    t.string   "profile_id", limit: 255
+    t.integer "group_id"
+    t.string  "kind"
+    t.date    "expires_on"
+    t.jsonb   "chargify_return_params"
   end
 
   add_index "subscriptions", ["group_id"], name: "index_subscriptions_on_group_id", using: :btree
+  add_index "subscriptions", ["kind"], name: "index_subscriptions_on_kind", using: :btree
 
   create_table "themes", force: :cascade do |t|
     t.text     "style"
