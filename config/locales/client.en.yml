@@ -379,19 +379,12 @@ en:
       parent_members: 'Privacy: This group is visible to members of {{parentGroupName}} and members of {{groupName}}'
       public: 'Privacy: This group is visible on the web'
 
-    gift_donation_ask: We'll ask your group members for a donation.
-    unlimited_members: unlimited members
-    unlimited_decisions: unlimited decisions
-    email_support: email support
-    standard_price_html: |
-      <strong>$19</strong>/month<br><span>or</span> $190/year
-    plus_body: 'Everything in Standard, plus:'
-    premium_support: premium support
-    custom_url: custom URL
-    usage_statistics: usage statistics
-    plus_price_html: |
-      <strong>$179</strong>/month<br><span>or</span> $1790/year
-    select: Select
+  confirm_gift_plan_modal:
+    heading: Gift plan selected
+    body: "If your group doesn't have the budget to pay for software, you don't need to pay a subscription. Your group members will see a card like this one when they visit your group:"
+    gift_card_heading: Gift plan
+    gift_card_body: "{{name}} is a gift-supported group. If you'd like to help Loomio achieve our mission, click this button:"
+    make_a_contribution: Make a contribution
 
   trial_card:
     title: '30-day trial'
@@ -410,11 +403,20 @@ en:
       <p>For groups that don't have the budget to pay a subscription.</p>
       <p>Donation supported, with no requirement to pay.</p>
 
-  confirm_gift_plan_modal:
-    heading: Gift plan selected
-    body: "If your group doesn't have the budget to pay for software, you don't need to pay a subscription. Your group members will see a card like this one when they visit your group:"
-    gift_card_heading: Gift plan
-    gift_card_body: "{{name}} is a gift-supported group. If you'd like to help Loomio achieve our mission, click this button:" 
+    gift_donation_ask: We'll ask your group members for a donation.
+    unlimited_members: unlimited members
+    unlimited_decisions: unlimited decisions
+    email_support: email support
+    standard_price_html: |
+      <strong>$19</strong>/month<br><span>or</span> $190/year
+    plus_body: 'Everything in Standard, plus:'
+    premium_support: premium support
+    custom_url: custom URL
+    usage_statistics: usage statistics
+    plus_price_html: |
+      <strong>$179</strong>/month<br><span>or</span> $1790/year
+    select: Select
+
 
   edit_group_form:
     title: 'Edit Group Settings'

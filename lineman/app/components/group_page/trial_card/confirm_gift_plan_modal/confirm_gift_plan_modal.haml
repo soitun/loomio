@@ -10,6 +10,12 @@
       %span{translate: 'confirm_gift_plan_modal.body'}
       .confirm-gift-plan-modal__gift-plan-card
         %h2.lmo-card-heading{translate: 'confirm_gift_plan_modal.gift_card_heading'}
-        %p{translate: 'confirm_gift_plan_modal.gift_card_body', translate-values: '{name: group.name}'}
+        %p{translate: 'confirm_gift_plan_modal.gift_card_body', translate-value-name: '{{group.name}}'}
+        %button.confirm-gift-plan-modal__confirm-button.btn.btn-block.lmo-btn-icon
+          %i.fa.fa-lg.fa-gift>
+          %span{translate: 'confirm_gift_plan_modal.make_a_contribution'}
 
   .modal-footer.lmo-clearfix
+    %button.confirm-gift-plan-modal__cancel-button.btn.btn-warning{type: 'button', ng-click: '$close()', translate: 'common.action.cancel'}
+    %button.confirm-gift-plan-modal__got-it-button.btn{type: 'button', ng-click: '$close()'} Ok, got it!
+

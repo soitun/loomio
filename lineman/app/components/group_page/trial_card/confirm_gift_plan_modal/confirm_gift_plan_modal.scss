@@ -4,9 +4,30 @@
 }
 
 .confirm-gift-plan-modal__gift-plan-card {
-  width: 300px;
+  max-width: 310px;
   margin: 20px auto;
   background-color: #fff;
-  padding: 10px;
+  padding: 15px;
   p { color: $grey-on-white; }
+}
+
+.confirm-gift-plan-modal__confirm-button {
+  color: #fff;
+  background-color: #4185DE;
+  color: #fff;
+  i.fa { color: #fff; }
+  &:hover { color: #fff; }
+  &:focus { color: #fff; }
+}
+
+.confirm-gift-plan-modal__cancel-button {
+  float: left;
+}
+
+.confirm-gift-plan-modal__got-it-button {
+  color: #fff;
+  background-color: #4185DE;
+  color: #fff;
+  &:hover { color: #fff; }
+  &:focus { color: #fff; }
 }
