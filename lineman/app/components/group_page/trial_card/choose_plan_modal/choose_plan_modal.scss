@@ -1,3 +1,8 @@
+.modal-dialog.modal-choose-plan-modal {
+  max-width: 800px;
+  width: auto;
+}
+
 .choose-plan-modal__header {
   margin-left: 10px;
   margin-bottom: 20px;
@@ -35,7 +40,8 @@
   padding-left: 10px;
   padding-right: 10px;
   margin-bottom: 20px;
-  width: 250px;
+  width: 33%;
+  min-width: 250px;
   float: left;
 }
 
@@ -70,7 +76,36 @@
   width: 200px;
 }
 
+.choose-plan-modal__select {
+  text-align: center;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+}
+
 .choose-plan-modal__select-button {
   position: absolute;
   bottom: 10px;
+  left: 30%;
+  background-color: #4185DE;
+  color: #fff;
+  width: 90px;
+  &:hover { color: #fff }
+  &:visited { color: #fff }
+  &:visited { color: #fff }
+}
+
+.choose-plan-modal__features-list {
+  padding-left: 30px;
+  i { margin-right: 5px; }
+}
+
+.choose-plan-modal__support {
+  text-align: left;
+  img {
+    float: left;
+    height: 50px;
+    width: 50px;
+    margin-right: 10px;
+  }
 }

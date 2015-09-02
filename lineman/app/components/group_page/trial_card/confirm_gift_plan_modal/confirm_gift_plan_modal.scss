@@ -1,0 +1,12 @@
+.modal-dialog.modal-confirm-gift-plan-modal {
+  max-width: 450px;
+  width: auto;
+}
+
+.confirm-gift-plan-modal__gift-plan-card {
+  width: 300px;
+  margin: 20px auto;
+  background-color: #fff;
+  padding: 10px;
+  p { color: $grey-on-white; }
+}

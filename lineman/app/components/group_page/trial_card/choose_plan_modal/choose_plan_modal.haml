@@ -16,7 +16,7 @@
       .choose-plan-modal__col
         .choose-plan-modal__option.choose-plan-modal__option--standard
           %h2.lmo-h2{translate: "choose_plan_modal.standard"}
-          %ul
+          %ul.choose-plan-modal__features-list
             %li
               %i.fa.fa-check
               {{"choose_plan_modal.unlimited_members" | translate}}
@@ -32,7 +32,7 @@
         .choose-plan-modal__option
           %h2.lmo-h2{translate: "choose_plan_modal.plus"}
           %p{translate: "choose_plan_modal.plus_body"}
-          %ul
+          %ul.choose-plan-modal__features-list
             %li
               %i.fa.fa-check
               {{"choose_plan_modal.premium_support" | translate}}
@@ -43,7 +43,13 @@
               %i.fa.fa-check
               {{"choose_plan_modal.usage_statistics" | translate}}
           %p.choose-plan-modal__price{translate: "choose_plan_modal.plus_price_html"}
-          %button.choose-plan-modal__select-button.btn{translate: "choose_plan_modal.select"}
+          .choose-plan-modal__select
+            %button.choose-plan-modal__select-button.btn{translate: "choose_plan_modal.select"}
 
   .modal-footer.lmo-clearfix
-    %button.btn.btn-warning{type: 'button', ng-click: '$close()', translate: 'common.action.cancel'}
+    .row
+      .col-md-7.choose-plan-modal__support
+        %img{src: '/img/mhjb.png', alt: 'Mathew from Loomio'}
+        %p I'm happy to <a href=''>talk with you</a> about extending your trial, or with any other questions you may have.
+      .col-md-2.col-md-offset-3.choose-plan-modal__cancel
+        %button.btn.btn-warning{type: 'button', ng-click: '$close()', translate: 'common.action.cancel'}
