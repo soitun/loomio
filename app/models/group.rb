@@ -171,7 +171,7 @@ class Group < ActiveRecord::Base
 
   has_many :webhooks, as: :hookable
 
-  has_one :subscription, dependent: :destroy
+  belongs_to :subscription, dependent: :destroy
 
   delegate :include?, to: :users, prefix: true
   delegate :users, to: :parent, prefix: true

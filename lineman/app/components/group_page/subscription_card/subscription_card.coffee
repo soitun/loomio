@@ -5,11 +5,11 @@ angular.module('loomioApp').directive 'subscriptionCard', ->
   replace: true
   controller: ($scope, ModalService, ChoosePlanModal, ConfirmGiftPlanModal) ->
 
+    $scope.showCard = ->
+      _.includes ['gift', 'trial'], $scope.group.subscriptionKind
+
     $scope.isExpired = ->
       false
 
     $scope.choosePlan = ->
       ModalService.open ChoosePlanModal, group: -> $scope.group
-
-    $scope.chooseGiftPlan = ->
-      ModalService.open ConfirmGiftPlanModal, group: -> $scope.group

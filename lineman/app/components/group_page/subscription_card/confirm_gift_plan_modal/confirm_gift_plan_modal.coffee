@@ -5,4 +5,5 @@ angular.module('loomioApp').factory 'ConfirmGiftPlanModal', ->
     $scope.group = group
 
     $scope.submit = ->
-      
+      $scope.group.remote.postMember(group.key, 'use_gift_subscription').then ->
+        $scope.$close()

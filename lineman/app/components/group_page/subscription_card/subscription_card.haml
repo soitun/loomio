@@ -1,7 +1,11 @@
-%section.subscription-card
-  %h2#subscription-card__title.lmo-card-heading{ translate: 'subscription_card.title'}
-  %p{ng-if: '!isExpired()', translate: 'subscription_card.in_progress_body', translate-values: '{name: group.name}'}
-  %p{ng-if: 'isExpired()', translate: 'subscription_card.expired_body_html', translate-values: '{name: group.name}'}
-  %button.subscription-card__choose-plan-button.btn.btn-block.lmo-btn-icon{href: '', ng-click: 'choosePlan()'}
-    %i.fa.fa-lg.fa-calendar-check-o>
-    %span{translate: 'subscription_card.choose_plan'}
+.blank
+  %section.subscription-card{ng-if: 'showCard()'}
+    .blank{ng-if: 'group.subscriptionKind == "gift"'}
+      Gift
+    .blank{ng-if: 'group.subscriptionKind == "trial"'}
+      %h2#subscription-card__title.lmo-card-heading{ translate: 'subscription_card.title'}
+      %p{ng-if: '!isExpired()', translate: 'subscription_card.in_progress_body', translate-values: '{name: group.name}'}
+      %p{ng-if: 'isExpired()', translate: 'subscription_card.expired_body_html', translate-values: '{name: group.name}'}
+      %button.subscription-card__choose-plan-button.btn.btn-block.lmo-btn-icon{href: '', ng-click: 'choosePlan()'}
+        %i.fa.fa-lg.fa-calendar-check-o>
+        %span{translate: 'subscription_card.choose_plan'}

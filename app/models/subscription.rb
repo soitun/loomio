@@ -1,7 +1,7 @@
 class Subscription < ActiveRecord::Base
-  belongs_to :group
+  has_one :group
   validates_presence_of :kind, :group
-  validates_inclusion_of :kind, in: ['trial', 'gift', 'chargify']
+  validates_inclusion_of :kind, in: ['trial', 'gift', 'paid']
   validate :only_parent_groups
 
   private

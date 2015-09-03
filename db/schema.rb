@@ -430,6 +430,7 @@ ActiveRecord::Schema.define(version: 20150902075758) do
     t.boolean  "is_commercial"
     t.boolean  "is_referral",                                    default: false,          null: false
     t.integer  "cohort_id"
+    t.integer  "subscription_id"
     t.integer  "default_group_cover_id"
   end
 
@@ -635,13 +636,10 @@ ActiveRecord::Schema.define(version: 20150902075758) do
   add_index "organisation_visits", ["visit_id", "organisation_id"], name: "index_organisation_visits_on_visit_id_and_organisation_id", unique: true, using: :btree
 
   create_table "subscriptions", force: :cascade do |t|
-    t.integer "group_id"
-    t.string  "kind"
-    t.date    "expires_on"
-    t.jsonb   "chargify_return_params"
+    t.string "kind"
+    t.date   "expires_on"
   end
 
-  add_index "subscriptions", ["group_id"], name: "index_subscriptions_on_group_id", using: :btree
   add_index "subscriptions", ["kind"], name: "index_subscriptions_on_kind", using: :btree
 
   create_table "themes", force: :cascade do |t|

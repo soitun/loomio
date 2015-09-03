@@ -37,6 +37,7 @@ Loomio::Application.routes.draw do
     resources :groups, only: [:show, :create, :update] do
       get :subgroups, on: :member
       patch :archive, on: :member
+      post :use_gift_subscription, on: :member
       post 'upload_photo/:kind', on: :member, action: :upload_photo
     end
 

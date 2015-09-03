@@ -30,7 +30,7 @@ class GroupSerializer < ActiveModel::Serializer
   has_one :parent, serializer: GroupSerializer, root: 'groups'
 
   def subscription_kind
-    object.subscription.kind
+    object.subscription.try(:kind)
   end
 
   def logo_url_medium
