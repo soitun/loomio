@@ -32,8 +32,8 @@
             .group-page__description-text.lmo-last.lmo-markdown-wrapper{ marked: 'groupPage.group.description' }
           %discussions_card{group: 'groupPage.group'}
         .col-sm-4
-          %trial_card{group: 'groupPage.group'}
-          %subscription_card{group: 'groupPage.group'}
+          %trial_card{ng-if: 'groupPage.showTrialCard()', group: 'groupPage.group'}
+          %gift_card{ng-if: 'groupPage.showGiftCard()', group: 'groupPage.group'}
           %membership_requests_card{group: 'groupPage.group'}
           %members_card{group: 'groupPage.group'}
           %subgroups_card{group: 'groupPage.group'}
