@@ -1,9 +1,9 @@
-.trial-card {
+.subscription-card {
   @include card;
   p { color: $grey-on-white; }
 }
 
-.trial-card__choose-plan-button {
+.subscription-card__choose-plan-button {
   color: #fff;
   background-color: #4185DE;
   color: #fff;

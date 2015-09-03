@@ -385,8 +385,9 @@ en:
     gift_card_heading: Gift plan
     gift_card_body: "{{name}} is a gift-supported group. If you'd like to help Loomio achieve our mission, click this button:"
     make_a_contribution: Make a contribution
+    got_it: "Ok, got it!"
 
-  trial_card:
+  subscription_card:
     title: '30-day trial'
     choose_plan: 'Choose your pricing plan'
     in_progress_body: 'Thanks for trying out Loomio with <strong>{{name}}</strong>. You can pick a pricing plan that works for you at any time.'
@@ -402,6 +403,8 @@ en:
     gift_body_html: |
       <p>For groups that don't have the budget to pay a subscription.</p>
       <p>Donation supported, with no requirement to pay.</p>
+    support_html: "I'm happy to <a href=''>talk with you</a> about extending your trial, or with any other questions you may have."
+    remind_me_later: Remind me later
 
     gift_donation_ask: We'll ask your group members for a donation.
     unlimited_members: unlimited members

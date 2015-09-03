@@ -14,6 +14,11 @@ class API::GroupsController < API::RestfulController
     respond_with_collection
   end
 
+  def use_gift_subscription
+    SubscriptionService.use_gift_subscription(resource)
+    respond_with_resource
+  end
+
   def upload_photo
     ensure_photo_params
     service.update group: resource, actor: current_user, params: { params[:kind] => params[:file] }
