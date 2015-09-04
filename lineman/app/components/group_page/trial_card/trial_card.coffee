@@ -1,7 +1,7 @@
-angular.module('loomioApp').directive 'subscriptionCard', ->
+angular.module('loomioApp').directive 'trialCard', ->
   scope: {group: '='}
   restrict: 'E'
-  templateUrl: 'generated/components/group_page/subscription_card/subscription_card.html'
+  templateUrl: 'generated/components/group_page/trial_card/trial_card.html'
   replace: true
   controller: ($scope, ModalService, ChoosePlanModal, ConfirmGiftPlanModal) ->
 

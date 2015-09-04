@@ -1,6 +1,6 @@
 describe 'Subscription flow', ->
 
-  subscriptionCard = require './helpers/subscription_card_helper.coffee'
+  trialCard = require './helpers/trial_card_helper.coffee'
   testHelper = require './helpers/test_helper.coffee'
 
   describe 'signup from front page', ->
@@ -8,16 +8,18 @@ describe 'Subscription flow', ->
 
   describe 'new group with 30 day trial', ->
 
-    beforeEach ->
+    it 'displays the trial card to on group page for coordinators only', ->
+      testHelper.loadGroupOnTrialAdmin()
+      expect(trialCard.cardText()).toContain('You can pick a pricing plan')
+
+    it 'does not display the trial card for non-coordinators', ->
       testHelper.loadGroupOnTrial()
+      expect(trialCard.card().isPresent()).toBe(false)
 
-    it 'tells displays the trial card on group page', ->
-      expect(subscriptionCard.cardText()).toContain('You can pick a pricing plan')
-
-    it 'lets you choose gift plan', ->
-      subscriptionCard.clickChoosePricingPlanButton()
-      subscriptionCard.selectGiftPlan()
-      expect(subscriptionCard.confirmGiftPlanText()).toContain('Gift plan selected')
-      subscriptionCard.clickConfirmGiftPlanOk()
-
-      
+    it 'lets coordinator choose gift plan', ->
+      testHelper.loadGroupOnTrialAdmin()
+      trialCard.clickChoosePricingPlanButton()
+      trialCard.selectGiftPlan()
+      expect(trialCard.confirmGiftPlanText()).toContain('Gift plan selected')
+      trialCard.clickConfirmGiftPlanOk()
+      expect(trialCard.giftCardText()).toContain('GIFT PLAN')

@@ -47,9 +47,16 @@ class DevelopmentController < ApplicationController
     redirect_to group_url(test_group)
   end
 
-  def setup_group_on_trial
+  def setup_group_on_trial_admin
     cleanup_database
     sign_in patrick
+    StartGroupService.start_group(test_group)
+    redirect_to group_url(test_group)
+  end
+
+  def setup_group_on_trial
+    cleanup_database
+    sign_in jennifer
     StartGroupService.start_group(test_group)
     redirect_to group_url(test_group)
   end

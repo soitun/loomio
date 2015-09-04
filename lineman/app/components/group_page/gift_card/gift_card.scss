@@ -1,9 +1,9 @@
-.subscription-card {
+.gift-card {
   @include card;
   p { color: $grey-on-white; }
 }
 
-.subscription-card__choose-plan-button {
+.gift-card__confirm-button {
   color: #fff;
   background-color: #4185DE;
   color: #fff;

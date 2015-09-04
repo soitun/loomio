@@ -334,21 +334,12 @@ describe Group do
       it {should be false}
     end
 
-    context 'group has online subscription' do
+    context 'group has paid subscription' do
       before do
         group.subscription = Subscription.create(group: group, amount: 0)
       end
 
-      context 'with amount 0' do
-        it {should be false}
-      end
-
-      context 'with amount > 0' do
-        before do
-          group.subscription.amount = 1
-        end
-        it {should be true}
-      end
+      # to do
     end
   end
 

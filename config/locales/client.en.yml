@@ -351,7 +351,8 @@ en:
     options:
       label: 'Options'
       edit_group: 'Edit Group Settings'
-      manage_members: 'Manage members'
+      manage_members: 'Manage Members'
+      manage_subscription: 'Manage Group Subscription'
       leave_group: 'Leave Group'
       deactivate_group: 'Deactivate Group'
     deactivate_group:
@@ -382,12 +383,14 @@ en:
   confirm_gift_plan_modal:
     heading: Gift plan selected
     body: "If your group doesn't have the budget to pay for software, you don't need to pay a subscription. Your group members will see a card like this one when they visit your group:"
-    gift_card_heading: Gift plan
-    gift_card_body: "{{name}} is a gift-supported group. If you'd like to help Loomio achieve our mission, click this button:"
-    make_a_contribution: Make a contribution
     got_it: "Ok, got it!"
 
-  subscription_card:
+  gift_card:
+    heading: Gift plan
+    body: "<strong>{{name}}</strong> is a gift-supported group. If you'd like to help Loomio achieve our mission, click this button:"
+    make_a_contribution: Make a contribution
+
+  trial_card:
     title: '30-day trial'
     choose_plan: 'Choose your pricing plan'
     in_progress_body: 'Thanks for trying out Loomio with <strong>{{name}}</strong>. You can pick a pricing plan that works for you at any time.'
