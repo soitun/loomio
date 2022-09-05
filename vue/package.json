@@ -69,7 +69,7 @@
     "md5": "2.3.0",
     "object.fromentries": "^2.0.5",
     "pretty-bytes": "^6.0.0",
-    "socket.io-client": "^4.4.1",
+    "socket.io-client": "^4.5.2",
     "string.prototype.matchall": "^4.0.7",
     "svg.js": "^2.7.1",
     "textarea-caret": "^3.1.0",
